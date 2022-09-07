@@ -3,27 +3,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "WalletKit",
+    name: "WalletKitSwift",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v11)
+        .iOS(.v11),
+        .macOS(.v11)
     ],
     products: [
         .library(
-            name: "WalletKit",
-            targets: ["WalletKit"]
+            name: "WalletKitSwift",
+            targets: ["WalletKitSwift"]
         ),
     ],
 
     dependencies: [
-        .package(name: "WalletKitCore", url: "https://github.com/fabriik/WalletKitCore", .upToNextMinor(from: "0.0.2"))
+        .package(name: "WalletKitCore", url: "https://github.com/fabriik/WalletKitCore", .branchItem("rcresnik/chore/initial"))
     ],
 
     targets: [
         .target(
-            name: "WalletKit",
+            name: "WalletKitSwift",
             dependencies: [
-                "WalletKitCore"
+                .product(name: "WalletKitCore", package: "WalletKitCore"),
             ],
             path: "WalletKit"
         ),
