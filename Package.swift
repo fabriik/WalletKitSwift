@@ -16,30 +16,16 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(name: "WalletKitCore", url: "git@github.com:fabriik/WalletKitCore.git", .branchItem("rcresnik/chore/initial")),
+        .package(name: "WalletKit", url: "git@github.com:fabriik/WalletKitCore.git", .upToNextMajor(from: "0.0.1"))
     ],
 
     targets: [
         .target(
             name: "WalletKit",
             dependencies: [
-                "WalletKitCore"
-            ],
-            path: "WalletKit"
-        ),
-
-        .testTarget(
-            name: "WalletKitTests",
-            dependencies: [
                 "WalletKit"
             ],
-            path: "WalletKitTests",
-            exclude: [
-                "README.md"
-            ],
-            resources: [
-                .copy ("Resources/WalletKitTestsConfig.json")
-            ]
+            path: "WalletKit"
         ),
     ]
 )
