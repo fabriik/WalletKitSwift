@@ -16,14 +16,14 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(name: "WalletKit", url: "https://github.com/fabriik/WalletKitCore", .upToNextMajor(from: "0.0.1"))
+        .package(name: "WalletKitCore", url: "https://github.com/fabriik/WalletKitCore", .upToNextMajor(from: "0.0.1"))
     ],
 
     targets: [
         .target(
             name: "WalletKit",
             dependencies: [
-                "WalletKit"
+                "WalletKitCore"
             ],
             path: "WalletKit"
         ),
