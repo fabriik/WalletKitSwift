@@ -16,7 +16,7 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(path: "../WalletKitCore")
+        .package(name: "WalletKitCore", url: "git@github.com:fabriik/WalletKitCore.git", .branchItem("rcresnik/chore/initial")),
     ],
 
     targets: [
