@@ -16,7 +16,7 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(name: "WalletKitCore", url: "https://github.com/fabriik/WalletKitCore", .upToNextMajor(from: "0.0.1"))
+        .package(name: "WalletKitCore", url: "https://github.com/fabriik/WalletKitCore", .upToNextMinor(from: "0.0.2"))
     ],
 
     targets: [
